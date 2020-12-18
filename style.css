@@ -1,0 +1,54 @@
+body{
+    background-color: #fafafa;
+}
+
+.dino {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    background-image: url(dino.png);
+    bottom: 0; /**coloca o elemento embaixo**/
+}
+
+.cactus {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 0;
+    background-image: url(cactus.png);
+}
+
+.gameover {
+    text-align: center;
+    color: black;
+    margin-top: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a:link 
+{ 
+ text-decoration:none; 
+} 
+
+.again {
+    margin-left: 43.5%;
+}
+
+@keyframes slideright {
+    from {
+        background-position: 700%;
+    }
+    to {
+        background-position: 0;
+    }
+}
+
+.background {
+    position: absolute;
+    bottom: 0;
+    background-image: url(back5.jpg);
+    background-repeat: repeat-x;
+    animation: slideright 60s infinite normal;
+    width: 100%;
+    height: 100%;
+}
