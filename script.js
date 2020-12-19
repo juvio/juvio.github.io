@@ -1,9 +1,10 @@
 const dino = document.querySelector(".dino");
 const background = document.querySelector(".background");
-const love = document.querySelector(".love");
+const texto = document.querySelector(".texto");
 
 let isJumping = false;
 let position = 0;
+let count = 0;
 
 const handleKeyUp = (event, url) => {
   if (event.keyCode === 32) {
@@ -74,16 +75,16 @@ const jump = () => {
 
 const createCactus = () => {
   const cactus = document.createElement("div");
-  let cactusPosition = 1000;
   let randomTime = Math.random() * 4000;
+  let cactusPosition = 1000;
 
   cactus.classList.add("cactus");
   cactus.style.left = 1000 + "px";
-  background.appendChild(cactus);
 
   let leftInterval = setInterval(() => {
     cactusPosition -= 10;
     cactus.style.left = cactusPosition + "px";
+    background.appendChild(cactus);
 
     if (cactusPosition < -60) {
       clearInterval(leftInterval);
